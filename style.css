@@ -1,0 +1,227 @@
+/* Define colors */
+
+:root {
+  /* Primary colors */
+  /* Blue */
+  --blue: hsl(246, 80%, 60%);
+
+  /* Light red (work) */
+  --light-red-work: hsl(15, 100%, 70%);
+  /* Soft blue (play) */
+  --soft-blue-play: hsl(195, 74%, 62%);
+  /* Light red (study) */
+  --light-red-study: hsl(348, 100%, 68%);
+  /* Lime green (exercise) */
+  --lime-green-exercise: hsl(145, 58%, 55%);
+  /* Violet (social) */
+  --violet-social: hsl(264, 64%, 52%);
+  /* Soft orange (self care) */
+  --soft-orange-self-care: hsl(43, 84%, 65%);
+
+  /* Neutral colors */
+  /* Very dark blue */
+  --very-dark-blue: hsl(226, 43%, 10%);
+  /* Dark blue */
+  --dark-blue: hsl(235, 46%, 20%);
+  /* Desaturated blue */
+  --desaturated-blue: hsl(235, 45%, 61%);
+  /* Pale blue */
+  --pale-blue: hsl(236, 100%, 87%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--very-dark-blue);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  background-color: var(--blue);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.header img {
+  border-radius: 50%;
+  border: 2px solid var(--pale-blue);
+}
+
+.header h2 {
+  color: var(--pale-blue);
+}
+
+
+/* Report */
+.report {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.report img {
+  border-radius: 50%;
+  border: 2px solid var(--pale-blue);
+}
+
+.report h2 {
+  color: var(--pale-blue);
+}
+
+.report h1 {
+  color: var(--pale-blue);
+}
+
+/* Timeframes */
+.timeframes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: var(--pale-blue);
+}
+
+.timeframes h2 {
+  color: var(--pale-blue);
+} 
+
+.timeframes p {
+  color: var(--desaturated-blue);
+}
+
+.timeframes h3 {
+  color: var(--pale-blue);
+}
+
+/* Grid */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Header Section */
+.header {
+  grid-area: 1 / 1 / 2 / 5;
+}
+
+/* Report Section */
+.report {
+  grid-area: 2 / 1 / 3 / 5;
+}
+
+/* Timeframes Section */
+.timeframes {
+  grid-area: 3 / 1 / 4 / 5;
+}
+
+/* Work Section */
+.work {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+/* Play Section */
+.play {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+/* Study Section */
+.study {
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+/* Exercise Section */
+.exercise {
+  grid-area: 1 / 4 / 2 / 5;
+}
+
+/* Social Section */
+.social {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+/* Self Care Section */
+.self-care {
+  grid-area: 2 / 2 / 3 / 5;
+}
+
+/* Footer Section */
+.footer {
+  grid-area: 4 / 1 / 5 / 5;
+}
+
+/* Daily Section */
+.daily {
+  grid-area: 1 / 1 / 3 / 3;
+}
+
+/* Weekly Section */
+.weekly {
+  grid-area: 1 / 3 / 3 / 5;
+}
+
+/* Monthly Section */
+.monthly {
+  grid-area: 3 / 1 / 5 / 5;
+}
+
+/* Section */
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: var(--dark-blue);
+}
+
+.section h3 {
+  color: var(--pale-blue);
+}
+
+.section p {
+  color: var(--desaturated-blue);
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--pale-blue);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+/* Media Queries */
+@media screen and (min-width: 1440px) {
+  .container {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
