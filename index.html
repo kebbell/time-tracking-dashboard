@@ -1,140 +1,181 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="stylesheet" href="style.css">
+    <!-- Styleheet -->
+    <link rel="stylesheet" href="style.css" />
 
-  <title>Time tracking dashboard</title>
-</head>
-<body>
-  <section class="container">
-    <div class="report">
-      <h2>Report for</h2>
-      <h1>Jeremy Robson</h1>
-    </div>
-  </section>
-  
-  <section>
-    <div class="timeframes">
-      <h2>Daily</h2>
-      <h2>Weekly</h2>
-      <h2>Monthly</h2>
-    </div>
-  </section>
+    <!-- Javascript file -->
+    <script src="script.js" defer></script>
 
-  <section class="container daily">
-    <h2>Daily</h2>
-    <div class="section">
-      <h3>Work</h3>
-      <p>Current - 5hrs</p>
-      <p>Previous - 7hrs</p>
-    </div>
-    <div class="section">
-      <h3>Play</h3>
-      <p>Current - 1hr</p>
-      <p>Previous - 2hrs</p>
-    </div>
-    <div class="section">
-      <h3>Study</h3>
-      <p>Current - 0hrs</p>
-      <p>Previous - 1hr</p>
-    </div>
-    <div class="section">
-      <h3>Exercise</h3>
-      <p>Current - 1hr</p>
-      <p>Previous - 1hr</p>
-    </div>
-    <div class="section">
-      <h3>Social</h3>
-      <p>Current - 1hr</p>
-      <p>Previous - 3hrs</p>
-    </div>
-    <div class="section">
-      <h3>Self Care</h3>
-      <p>Current - 0hrs</p>
-      <p>Previous - 1hr</p>
-    </div>
-  </section>
+    <title>Time tracking dashboard</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <!-- User Details -->
+        <div class="card card__user">
+          <div class="user__details">
+            <div class="user__details--avatar">
+              <img src="./images/image-jeremy.png" alt="Jeremy Robson" />
+            </div>
+            <section class="user__details--info">
+              <p>Report for</p>
+              <h1>Jeremy Robson</h1>
+            </section>
+          </div>
+          <ul class="activity__period">
+            <li>Daily</li>
+            <li>Weekly</li>
+            <li>Monthly</li>
+          </ul>
+        </div>
 
-  <section class="container weekly">
-    <h2>Weekly</h2>
-    <div class="section">
-      <h3>Work</h3>
-      <p>Current - 32hrs</p>
-      <p>Previous - 36hrs</p>
-    </div>
-    <div class="section">
-      <h3>Play</h3>
-      <p>Current - 10hrs</p>
-      <p>Previous - 8hrs</p>
-    </div>
-    <div class="section">
-      <h3>Study</h3>
-      <p>Current - 4hrs</p>
-      <p>Previous - 7hrs</p>
-    </div>
-    <div class="section">
-      <h3>Exercise</h3>
-      <p>Current - 4hrs</p>
-      <p>Previous - 5hrs</p>
-    </div>
-    <div class="section">
-      <h3>Social</h3>
-      <p>Current - 5hrs</p>
-      <p>Previous - 10hrs</p>
-    </div>
-    <div class="section">
-      <h3>Self Care</h3>
-      <p>Current - 2hrs</p>
-      <p>Previous - 2hrs</p>
-    </div>
-  </section>
+        <!-- Activity Cards -->
 
-  <section class="container monthly">
-    <h2>Monthly</h2>
-    <div class="section">
-      <h3>Work</h3>
-      <p>Current - 103hrs</p>
-      <p>Previous - 128hrs</p>
-    </div>
-    <div class="section">
-      <h3>Play</h3>
-      <p>Current - 23hrs</p>
-      <p>Previous - 29hrs</p>
-    </div>
-    <div class="section">
-      <h3>Study</h3>
-      <p>Current - 13hrs</p>
-      <p>Previous - 19hrs</p>
-    </div>
-    <div class="section">
-      <h3>Exercise</h3>
-      <p>Current - 11hrs</p>
-      <p>Previous - 18hrs</p>
-    </div>
-    <div class="section">
-      <h3>Social</h3>
-      <p>Current - 21hrs</p>
-      <p>Previous - 23hrs</p>
-    </div>
-    <div class="section">
-      <h3>Self Care</h3>
-      <p>Current - 7hrs</p>
-      <p>Previous - 11hrs</p>
-    </div>
-  </section>
+        <!-- WORK -->
+        <div class="card card__activity">
+          <div class="card__details">
+            <section class="card__header">
+              <h2>Work</h2>
+              <figure>
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </figure>
+            </section>
+            <section class="card__content">
+              <h2 class="card__hour"></h2>
+              <h3 class="card__duration"></h3>
+            </section>
+          </div>
+        </div>
 
-  
-<footer>
-  <div class="footer">
-    Challenge by Frontend Mentor.
-    Coded by Kebbell.
-  </div>
-</footer>
-<script src="script.js"></script>
-</body>
+        <!-- PLAY -->
+        <div class="card card__activity">
+          <div class="card__details">
+            <section class="card__header">
+              <h2>Play</h2>
+              <figure>
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </figure>
+            </section>
+            <section class="card__content">
+              <h2 class="card__hour"></h2>
+              <h3 class="card__duration"></h3>
+            </section>
+          </div>
+        </div>
+
+        <!-- STUDY -->
+        <div class="card card__activity">
+          <div class="card__details">
+            <section class="card__header">
+              <h2>Study</h2>
+              <figure>
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </figure>
+            </section>
+            <section class="card__content">
+              <h2 class="card__hour"></h2>
+              <h3 class="card__duration"></h3>
+            </section>
+          </div>
+        </div>
+
+        <!-- EXERCISE -->
+        <div class="card card__activity">
+          <div class="card__details">
+            <section class="card__header">
+              <h2>Exercise</h2>
+              <figure>
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </figure>
+            </section>
+            <section class="card__content">
+              <h2 class="card__hour"></h2>
+              <h3 class="card__duration"></h3>
+            </section>
+          </div>
+        </div>
+
+        <!-- SOCIAL -->
+        <div class="card card__activity">
+          <div class="card__details">
+            <section class="card__header">
+              <h2>Social</h2>
+              <figure>
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </figure>
+            </section>
+            <section class="card__content">
+              <h2 class="card__hour"></h2>
+              <h3 class="card__duration"></h3>
+            </section>
+          </div>
+        </div>
+
+        <!-- SELF CARE -->
+        <div class="card card__activity">
+          <div class="card__details">
+            <section class="card__header">
+              <h2>Self Care</h2>
+              <figure>
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </figure>
+            </section>
+            <section class="card__content">
+              <h2 class="card__hour"></h2>
+              <h3 class="card__duration"></h3>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
